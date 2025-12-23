@@ -3,13 +3,11 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'node:url';
 import stylelint from 'vite-plugin-stylelint';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
-
 export default defineConfig(({ mode }) => {
   const isProd = mode === 'production';
-  const BASE_PATH = '/repository-name/';
 
   return {
-    base: isProd ? BASE_PATH : '/',
+    base: isProd ? '/react-hw-08/' : '/',
 
     plugins: [
       react(),
